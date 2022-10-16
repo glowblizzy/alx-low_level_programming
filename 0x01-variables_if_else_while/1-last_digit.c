@@ -3,31 +3,28 @@
 #include <stdio.h>
 
 /**
- * main -  program will assign a random number to the variable
- *
+ *main - Entry point
+ *Description: checks on the last digit of the assigned var
  * Return: 0
  */
 int main(void)
 {
-		int n;
-		int x;
+		int n, m;
 
 		srand(time(0));
 		n = rand() - RAND_MAX / 2;
-		x = n % 10;
-		printf("Last digit of %d is %d ", n, x);
-		if (x > 5)
+		m = n % 10;
+		if (m > 5)
 		{
-			printf("and is greater than 5");
+			printf("Last digit of %d is %d and is greater than 5\n", n, m);
 		}
-		if (x == 0)
+		else if (m < 6 && m != 0)
 		{
-			printf("and is 0");
+			printf("Last digit of %d is %d and is less than 6 and not 0\n", n, m);
 		}
-		if (x < 6 && x != 0)
+		else
 		{
-			printf("and is less than 6 and not 0");
+			printf("Last digit of %d is %d and 0\n", n, m);
 		}
-		printf("\n");
 		return (0);
 }
