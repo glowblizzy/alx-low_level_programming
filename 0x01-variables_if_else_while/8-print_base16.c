@@ -1,21 +1,23 @@
 #include <stdio.h>
-
+#include <unistd.h>
 /**
- * main - Prints all the numbers of base 16 in lowercase.
- *
- * Return: Always 0.
+ * main - Entry point
+ * Description: Print base 16 numbers
+ * Return: Always 0 (success)
 */
 int main(void)
 {
-		int num;
-		char letter;
+		char c;
+		char d = '0';
 
-		for (num = 0; num < 10; num++)
-			putchar((num % 10) + '0');
-
-		for (letter = 'a'; letter <= 'f'; letter++);
-		putchar(letter):	
-		putchar('\n'):
-
-		return (0);
+		while (d <= '9')
+		{
+			putchar(d);
+			d++;
+		}
+		for (c = 'a'; c <= 'f'; c++)
+		{
+			putchar(c);
+														putchar('\n');
+														return (0);
 }
